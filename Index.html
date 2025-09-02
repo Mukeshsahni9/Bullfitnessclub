@@ -321,7 +321,7 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212, 175, 55, 0.3);
         }
 
-        /* Form styles */
+              /* Form styles */
         .form-input {
             width: 100%;
             background: transparent;
@@ -332,6 +332,10 @@
             color: #fff;
             outline: none;
             transition: all 0.3s ease;
+            pointer-events: auto !important;
+            z-index: 15 !important;
+            position: relative;
+            cursor: text;
         }
 
         .form-input:focus {
@@ -353,6 +357,10 @@
             color: #fff;
             outline: none;
             transition: all 0.3s ease;
+            pointer-events: auto !important;
+            z-index: 15 !important;
+            position: relative;
+            cursor: pointer;
         }
 
         .form-select:focus {
@@ -360,6 +368,15 @@
             box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
 
+        /* Additional form fixes */
+        .glass-card form {
+            z-index: 15;
+            position: relative;
+        }
+
+        .glass-card form * {
+            pointer-events: auto !important;
+        }
         /* Layout */
         .container {
             max-width: 1200px;
